@@ -1,0 +1,16 @@
+name = "dorm-chatroom"
+main = "src/index.ts"
+compatibility_date = "2025-05-12"
+route.custom_domain = true
+route.pattern = "chatroom.getdorm.com"
+
+[[durable_objects.bindings]]
+name = "DORM_NAMESPACE"
+class_name = "DORM"
+
+[vars]
+DB_SECRET = "my-secret-key"  # Optional for database access
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["DORM"]
