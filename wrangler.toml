@@ -4,12 +4,13 @@ compatibility_date = "2025-05-12"
 route.custom_domain = true
 route.pattern = "chatroom.getdorm.com"
 
+[vars]
+DB_SECRET = "my-secret-key"  # Optional for database access
+
 [[durable_objects.bindings]]
 name = "DORM_NAMESPACE"
 class_name = "DORM"
 
-[vars]
-DB_SECRET = "my-secret-key"  # Optional for database access
 
 [[migrations]]
 tag = "v1"
